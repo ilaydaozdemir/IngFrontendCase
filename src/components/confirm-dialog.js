@@ -1,6 +1,23 @@
 import { LitElement, html, css } from 'lit';
 import { getLang } from '../store.js';
 
+const t = {
+  en: {
+    proceed: 'Proceed',
+    cancel: 'Cancel',
+    areYouSure: 'Are you sure?',
+  },
+  tr: {
+    proceed: 'Devam',
+    cancel: 'İptal',
+    areYouSure: 'Emin misiniz?',
+  }
+};
+function trKey(key) {
+  const lang = getLang();
+  return t[lang][key] || key;
+}
+
 export class ConfirmDialog extends LitElement {
   static styles = css`
     dialog {
@@ -120,20 +137,3 @@ export class ConfirmDialog extends LitElement {
 }
 
 customElements.define('confirm-dialog', ConfirmDialog);
-
-const t = {
-  en: {
-    proceed: 'Proceed',
-    cancel: 'Cancel',
-    areYouSure: 'Are you sure?',
-  },
-  tr: {
-    proceed: 'Devam',
-    cancel: 'İptal',
-    areYouSure: 'Emin misiniz?',
-  }
-};
-function trKey(key) {
-  const lang = getLang();
-  return t[lang][key] || key;
-}
