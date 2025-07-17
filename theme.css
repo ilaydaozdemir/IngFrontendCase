@@ -1,0 +1,63 @@
+/* theme.css */
+:root {
+  --font-family: "Segoe UI", sans-serif;
+  --font-size-h1: 24px;
+  --font-size-h2: 16px;
+  --spacing: 16px;
+  --color-text: #333;
+  --color-muted: #666;
+  --color-bg: #fff;
+  --color-primary: #ff6200; /* ING turuncusu */
+  --color-border: #e0e0e0;
+  --border-radius: 4px;
+}
+
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  padding: 8px 16px;
+  border-bottom: 1px solid #eee;
+}
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.header-logo {
+  border-radius: 8px;
+  object-fit: cover;
+}
+.header-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-left: 4px;
+}
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+.header-link {
+  color: #ff6200;
+  font-weight: 500;
+  opacity: 0.5;
+  cursor: pointer;
+}
+.header-add {
+  color: #ff6200;
+  opacity: 0.5;
+  font-weight: 400;
+  cursor: pointer;
+}
+.header-flag {
+  background: #e30a17;
+  color: #fff;
+  border: none;
+  border-radius: 2px;
+  padding: 2px 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
