@@ -24,7 +24,7 @@ class AppHeader extends HTMLElement {
             isTR ? "+ Çalışan Ekle" : "+ Add Employee"
           }</a>
           <button class="header-flag" id="langBtn">${
-            isTR ? "EN" : "TR"
+            isTR ? "TR" : "EN"
           }</button>
         </div>
       </header>

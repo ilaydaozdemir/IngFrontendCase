@@ -248,16 +248,47 @@ export class EmployeeForm extends LitElement {
           </label>
           <label>
             ${trKey("dept")}
-            <select name="dept" .value="${this.employee.dept || ""}">
+            <select name="dept" required>
               <option value="" disabled>${trKey("select")}</option>
-              <option>${trKey("analytics")}</option>
-              <option>${trKey("engineering")}</option>
-              <option>${trKey("sales")}</option>
-              <option>${trKey("hr")}</option>
-              <option>${trKey("support")}</option>
-              <option>${trKey("marketing")}</option>
-              <option>${trKey("finance")}</option>
-              <option>${trKey("it")}</option>
+              <option
+                value="analytics"
+                ?selected=${this.employee.dept === "analytics"}
+              >
+                ${trKey("analytics")}
+              </option>
+              <option
+                value="engineering"
+                ?selected=${this.employee.dept === "engineering"}
+              >
+                ${trKey("engineering")}
+              </option>
+              <option value="sales" ?selected=${this.employee.dept === "sales"}>
+                ${trKey("sales")}
+              </option>
+              <option value="hr" ?selected=${this.employee.dept === "hr"}>
+                ${trKey("hr")}
+              </option>
+              <option
+                value="support"
+                ?selected=${this.employee.dept === "support"}
+              >
+                ${trKey("support")}
+              </option>
+              <option
+                value="marketing"
+                ?selected=${this.employee.dept === "marketing"}
+              >
+                ${trKey("marketing")}
+              </option>
+              <option
+                value="finance"
+                ?selected=${this.employee.dept === "finance"}
+              >
+                ${trKey("finance")}
+              </option>
+              <option value="it" ?selected=${this.employee.dept === "it"}>
+                ${trKey("it")}
+              </option>
             </select>
           </label>
           <label>
